@@ -6,52 +6,100 @@ const TG_LINK = 'https://t.me/voroshilinaella';
 const HERO_IMG =
   'https://cdn.poehali.dev/projects/37648556-50d5-42c0-ad96-805e03ac1b12/files/2baffcdd-77de-4f07-b967-527386b8e2e9.jpg';
 
-const modules = [
+const weeks = [
   {
-    n: '01',
-    title: 'Распознать матрицу',
-    icon: 'Eye',
-    text: 'Учимся видеть навязанные программы, чужие сценарии и автоматические реакции, которые управляют жизнью.',
+    week: 'Неделя 1',
+    icon: 'Radar',
+    title: 'Обнаружение узлов и остановка оттока энергии',
+    focus:
+      'Останавливаем слив ресурса на обслуживание прошлых травм, возвращаем управление себе и открываем истинные настройки восприятия.',
+    sessions: [
+      {
+        n: 'Сеанс 1',
+        name: 'Активация чистого канала',
+        text: 'Раскрываем врождённые способности и интуитивный потенциал: ясновидение, яснознание, яснослушание, ясночувствование, яснообоняние. Очищаем каналы восприятия от ментального шума.',
+      },
+      {
+        n: 'Сеанс 2',
+        name: 'Аудит утечек и возврат ресурса',
+        text: 'Убираем энергетические утечки, скрытые привязки и деструктивные контракты с прошлыми партнёрами и обидами. Возвращаем ваш ресурс вам.',
+      },
+    ],
+    result:
+      'Выключается вечная «мыслемешалка», уходит тревожность. Просыпаетесь отдохнувшей, растворяется многолетняя усталость. Сила возвращается из прошлого — ощущение, что груз свалился с плеч.',
   },
   {
-    n: '02',
-    title: 'Отключить автопилот',
-    icon: 'Unplug',
-    text: 'Практики осознанности и работа с вниманием. Возвращаем себе право выбирать, а не реагировать.',
+    week: 'Неделя 2',
+    icon: 'ShieldOff',
+    title: 'Зачистка ментальных вирусов и выход из кармических петель',
+    focus:
+      'Находим неосознанные сценарии, которые крутятся в голове и создают тупиковую реальность. Перестаём бороться с жизнью через напряжение и контроль.',
+    sessions: [
+      {
+        n: 'Сеанс 3',
+        name: 'Ментальная деконструкция',
+        text: 'Находим, разрушаем и выводим заданные извне мысли, ложные желания и деструктивные программы. Глубокое очищение сознания от ментального мусора и чужих фильтров.',
+      },
+      {
+        n: 'Сеанс 4',
+        name: 'Разрушение кармических узлов',
+        text: 'Разрушаем циклические деструктивные сценарии, петли и кармические узлы, которые заставляли годами наступать на одни грабли в отношениях, работе и финансах.',
+      },
+    ],
+    result:
+      'Перестаёте наказывать себя и соглашаться на меньшее. Разрываете замкнутый круг «то густо, то пусто». В голове становится тихо и просторно — видите свои живые цели, а не чужие шаблоны.',
   },
   {
-    n: '03',
-    title: 'Чистка пространства',
-    icon: 'Sparkles',
-    text: 'Освобождаемся от страхов, ограничивающих убеждений и энергетических привязок прошлого.',
+    week: 'Неделя 3',
+    icon: 'Crown',
+    title: 'Освобождение от родовых оков и активация масштаба',
+    focus:
+      'Разрешаем себе быть большой и видимой для этого мира. Хватит прятать силу из-за страха осуждения или «Травмы ведьмы».',
+    sessions: [
+      {
+        n: 'Сеанс 5',
+        name: 'Освобождение от родовых программ',
+        text: 'Разделяем вашу суверенную судьбу и тяжёлые сценарии рода: выживание, бедность, «тяжёлая доля», лояльность к несчастным предкам.',
+      },
+      {
+        n: 'Сеанс 6',
+        name: 'Активация масштаба и финансового потолка',
+        text: 'Выжигаем страх больших денег, синдром самозванца и блок на подъём цен. Растворяем «Травму ведьмы» — спазм горла и страх видимости, мешающий заявлять о себе.',
+      },
+    ],
+    result:
+      'Свобода от груза предков — род становится опорой. Исчезает самозванец и страх критики. Появляется внутреннее право называть высокую честную стоимость без стыда и вины.',
   },
   {
-    n: '04',
-    title: 'Связь с собой',
-    icon: 'Compass',
-    text: 'Находим внутренний компас, слышим интуицию и восстанавливаем контакт со своей истинной природой.',
-  },
-  {
-    n: '05',
-    title: 'Новая реальность',
+    week: 'Неделя 4 · Бонус',
     icon: 'Sunrise',
-    text: 'Учимся создавать жизнь из состояния осознанности, а не из страха. Проявляем желаемое.',
-  },
-  {
-    n: '06',
-    title: 'Выход и интеграция',
-    icon: 'DoorOpen',
-    text: 'Закрепляем результат, выстраиваем новые опоры и план жизни за пределами старой системы.',
+    title: 'Заземление ресурса в материю и манифестация новой линии',
+    focus:
+      'Направляем возвращённую энергию на реальные цели. Духовные изменения приносят осязаемые плоды: деньги, здоровье, гармонию и уверенность.',
+    sessions: [
+      {
+        n: 'Сеанс 7',
+        name: 'Заземление ресурса в материальный мир',
+        text: 'Направляем всю возвращённую энергию на реальные цели: привлечение клиентов, выстраивание новой линии жизни, улучшение здоровья и достатка.',
+      },
+      {
+        n: 'Сеанс 8',
+        name: 'Манифестация пути и стабилизация поля',
+        text: 'Закрепляем высоковибрационное состояние в нервной системе. Учимся удерживать состояние в социуме и оставаться заземлённым проводником.',
+      },
+    ],
+    result:
+      'Реальные перемены в кошельке: доход растёт без надрыва, приходят новые клиенты. Появляется ясный план, как заявлять о себе. Нервная система привыкает к новому сильному состоянию — без «откатов».',
   },
 ];
 
 const benefits = [
-  { icon: 'BrainCircuit', t: 'Ясность мышления', d: 'Уходит туман в голове, появляется чёткость решений.' },
-  { icon: 'HeartPulse', t: 'Внутренний покой', d: 'Тревога сменяется устойчивостью и опорой на себя.' },
-  { icon: 'Flame', t: 'Возврат энергии', d: 'Силы, что уходили на чужие сценарии, возвращаются к вам.' },
-  { icon: 'Telescope', t: 'Новое видение', d: 'Жизнь открывается с тех сторон, которых вы не замечали.' },
-  { icon: 'Key', t: 'Свобода выбора', d: 'Вы перестаёте быть на автопилоте и выбираете сами.' },
-  { icon: 'Infinity', t: 'Связь с собой', d: 'Восстанавливается контакт со своей истинной природой.' },
+  { icon: 'Banknote', t: 'Свой честный чек', d: 'Уходит страх и стыд называть цену. Вы поднимаете стоимость со спокойствием «я этого стою».' },
+  { icon: 'Magnet', t: 'Клиенты без прогревов', d: 'Притягиваются люди, которые ценят вашу глубину и платят сразу, без долгих раздумий.' },
+  { icon: 'BrainCircuit', t: 'Чистая, тихая голова', d: 'Исчезает мыслемешалка и тревога за завтра. Просыпаетесь с ощущением «я со всем справлюсь».' },
+  { icon: 'BatteryCharging', t: 'Энергия на себя', d: 'Появляется чистый ресурс на свои удовольствия, отдых и желания, а не только на других.' },
+  { icon: 'ShieldCheck', t: 'Твёрдое спокойное «нет»', d: 'Учитесь отказывать без вины. Окружающие перестают сливать на вас негатив.' },
+  { icon: 'Users', t: 'Выход из роли спасателя', d: 'Перестаёте решать чужие проблемы в ущерб себе. Токсичное окружение мягко уходит.' },
 ];
 
 const reviews = [
@@ -165,7 +213,7 @@ const Index = () => {
         <div className="container relative z-10 grid gap-12 py-16 md:grid-cols-2 md:items-center">
           <div className="animate-rise">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold">
-              <Icon name="Sparkle" size={14} /> трансформационный интенсив
+              <Icon name="Sparkle" size={14} /> авторский 30-дневный интенсив
             </div>
             <h1 className="font-display text-5xl font-light leading-[1.05] sm:text-6xl lg:text-7xl">
               Выход
@@ -173,9 +221,17 @@ const Index = () => {
               из <span className="gold-gradient-text">матрицы</span>
             </h1>
             <p className="mt-7 max-w-md text-lg leading-relaxed text-muted-foreground">
-              Пробуждение сознания и выход за пределы навязанной реальности. Снимите
-              чужие программы и вернитесь к себе настоящему.
+              Полная перепрошивка энергосистемы и возвращение права на свою жизнь.
+              Выход из матрицы выживания и дефицита за 30 дней глубокой работы.
             </p>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground/70">
+              <span className="flex items-center gap-2">
+                <Icon name="CalendarDays" size={16} className="text-gold" /> 30 дней · 8 сеансов
+              </span>
+              <span className="flex items-center gap-2">
+                <Icon name="Video" size={16} className="text-gold" /> онлайн, 2 встречи в неделю
+              </span>
+            </div>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button
                 asChild
@@ -218,16 +274,15 @@ const Index = () => {
             Реальность — это <span className="gold-gradient-text">выбор</span>
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Большую часть жизни мы проживаем на автопилоте — по чужим сценариям, страхам и
-            убеждениям, которые когда-то приняли за свои. «Выход из матрицы» — это
-            глубокая практика пробуждения, где вы научитесь видеть эти программы и
-            освобождаться от них.
+            Каждая встреча — это мощный трансформационный энергетический сеанс в глубокой
+            тишине: работа на уровне первопричины в поле, живое групповое заземление опыта
+            и блок ответов на вопросы. 21 день глубокой работы + 7 дней интеграции.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {[
-              { icon: 'Eye', t: 'Увидеть', d: 'Распознать иллюзии и навязанные сценарии' },
-              { icon: 'Unplug', t: 'Освободиться', d: 'Снять старые программы и привязки' },
-              { icon: 'Sunrise', t: 'Создать', d: 'Жизнь из осознанности, а не страха' },
+              { icon: 'Waves', t: 'Сеанс в тишине', d: 'Работа на уровне первопричины в поле' },
+              { icon: 'MessagesSquare', t: 'Живой разбор', d: 'Заземление состояний и телесных откликов' },
+              { icon: 'HelpCircle', t: 'Ответы на вопросы', d: 'Поддержка на каждом этапе пути' },
             ].map((g) => (
               <div key={g.t} className="glass rounded-2xl p-7 text-left">
                 <Icon name={g.icon} className="text-gold" size={30} />
@@ -235,6 +290,18 @@ const Index = () => {
                 <p className="mt-2 text-sm text-muted-foreground">{g.d}</p>
               </div>
             ))}
+          </div>
+
+          <div className="glass mx-auto mt-10 max-w-2xl rounded-2xl p-7 text-left">
+            <div className="flex items-center gap-2 text-gold">
+              <Icon name="Target" size={20} />
+              <h3 className="font-display text-2xl">Для кого этот интенсив</h3>
+            </div>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              Для помогающих практиков, целителей, психологов и сильных людей, которые
+              тайно устали тащить всё на себе, застряли в финансовом тупике и живут в
+              режиме «черновика».
+            </p>
           </div>
         </div>
       </section>
@@ -245,28 +312,82 @@ const Index = () => {
           <div className="text-center">
             <SectionLabel icon="ScrollText">Программа</SectionLabel>
             <h2 className="font-display text-4xl font-light sm:text-5xl">
-              Шесть <span className="gold-gradient-text">ступеней</span> пробуждения
+              Путь длиною в <span className="gold-gradient-text">30 дней</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
-              Путь от распознавания матрицы до жизни в новой реальности.
+              8 трансформационных сеансов, выстроенных в чёткую последовательность — от
+              остановки оттока энергии до манифестации новой жизни.
             </p>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {modules.map((m) => (
+          <div className="mt-14 space-y-8">
+            {weeks.map((w, i) => (
               <div
-                key={m.n}
-                className="group glass relative overflow-hidden rounded-2xl p-7 transition-all hover:border-gold/40"
+                key={w.week}
+                className="glass relative overflow-hidden rounded-3xl p-7 sm:p-9"
               >
-                <span className="absolute -right-2 -top-3 font-display text-7xl text-gold/10 transition-colors group-hover:text-gold/20">
-                  {m.n}
-                </span>
-                <Icon name={m.icon} className="text-gold" size={28} />
-                <h3 className="mt-4 font-display text-2xl">{m.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {m.text}
+                <div className="mb-6 flex flex-wrap items-center gap-4 border-b border-border pb-6">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-gold/30 bg-gold/5 glow-gold">
+                    <Icon name={w.icon} className="text-gold" size={26} />
+                  </div>
+                  <div>
+                    <span className="text-xs uppercase tracking-[0.2em] text-gold">
+                      {w.week}
+                    </span>
+                    <h3 className="font-display text-2xl leading-tight sm:text-3xl">
+                      {w.title}
+                    </h3>
+                  </div>
+                  <span className="ml-auto hidden font-display text-6xl text-gold/10 sm:block">
+                    0{i + 1}
+                  </span>
+                </div>
+
+                <p className="mb-6 max-w-3xl leading-relaxed text-muted-foreground">
+                  {w.focus}
                 </p>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  {w.sessions.map((s) => (
+                    <div
+                      key={s.n}
+                      className="rounded-2xl border border-border/60 bg-background/30 p-5"
+                    >
+                      <span className="text-xs uppercase tracking-wider text-gold">
+                        {s.n}
+                      </span>
+                      <h4 className="mt-1 font-display text-xl">{s.name}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {s.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-5 flex items-start gap-3 rounded-2xl border border-gold/20 bg-gold/[0.04] p-5">
+                  <Icon name="Flame" className="mt-0.5 shrink-0 text-gold" size={20} />
+                  <div>
+                    <span className="text-xs uppercase tracking-wider text-gold">
+                      Результат недели
+                    </span>
+                    <p className="mt-1 text-sm leading-relaxed text-foreground/90">
+                      {w.result}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold"
+            >
+              <a href={TG_LINK} target="_blank" rel="noopener noreferrer">
+                <Icon name="Sparkles" size={18} /> Хочу участвовать
+              </a>
+            </Button>
           </div>
         </div>
       </section>
