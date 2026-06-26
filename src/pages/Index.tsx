@@ -231,6 +231,9 @@ const Index = () => {
               <span className="flex items-center gap-2">
                 <Icon name="Video" size={16} className="text-gold" /> онлайн, 2 встречи в неделю
               </span>
+              <span className="flex items-center gap-2">
+                <Icon name="UserCheck" size={16} className="text-gold" /> 1 индивидуальный сеанс с каждым участником
+              </span>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button
