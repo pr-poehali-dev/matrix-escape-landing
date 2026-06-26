@@ -136,7 +136,7 @@ const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const nav = [
-    { id: 'about', label: 'О интенсиве' },
+    { id: 'about', label: 'Об интенсиве' },
     { id: 'program', label: 'Программа' },
     { id: 'results', label: 'Результаты' },
     { id: 'reviews', label: 'Отзывы' },
@@ -270,9 +270,9 @@ const Index = () => {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative py-24">
+      <section id="about" className="relative py-14">
         <div className="container relative z-10 max-w-4xl text-center">
-          <SectionLabel icon="Moon">О интенсиве</SectionLabel>
+          <SectionLabel icon="Moon">Об интенсиве</SectionLabel>
           <h2 className="font-display text-4xl font-light sm:text-5xl">
             Реальность — это <span className="gold-gradient-text">выбор</span>
           </h2>
@@ -310,7 +310,7 @@ const Index = () => {
       </section>
 
       {/* PROGRAM */}
-      <section id="program" className="relative py-24">
+      <section id="program" className="relative py-14">
         <div className="container relative z-10 max-w-5xl">
           <div className="text-center">
             <SectionLabel icon="ScrollText">Программа</SectionLabel>
@@ -396,7 +396,7 @@ const Index = () => {
       </section>
 
       {/* RESULTS */}
-      <section id="results" className="relative py-24">
+      <section id="results" className="relative py-14">
         <div className="container relative z-10 max-w-5xl">
           <div className="text-center">
             <SectionLabel icon="Star">Результаты</SectionLabel>
@@ -422,7 +422,7 @@ const Index = () => {
       </section>
 
       {/* REVIEWS */}
-      <section id="reviews" className="relative py-24">
+      <section id="reviews" className="relative py-14">
         <div className="container relative z-10 max-w-5xl">
           <div className="text-center">
             <SectionLabel icon="Quote">Отзывы</SectionLabel>
@@ -452,7 +452,7 @@ const Index = () => {
       </section>
 
       {/* ABOUT ME */}
-      <section id="me" className="relative py-24">
+      <section id="me" className="relative py-14">
         <div className="container relative z-10 max-w-5xl">
           <div className="glass grid items-start gap-10 rounded-3xl p-8 sm:p-12 md:grid-cols-[300px_1fr]">
             <div className="relative mx-auto md:mx-0">
@@ -516,7 +516,7 @@ const Index = () => {
       </section>
 
       {/* CONTACT / CTA */}
-      <section id="contact" className="relative py-24">
+      <section id="contact" className="relative py-14">
         <div className="container relative z-10 max-w-3xl">
           <div className="glass relative overflow-hidden rounded-3xl border-gold/20 p-10 text-center sm:p-14">
             <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 animate-pulse-glow rounded-full bg-violet/40 blur-3xl" />
