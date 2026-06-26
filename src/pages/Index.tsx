@@ -428,21 +428,20 @@ const Index = () => {
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {reviews.map((r) => (
-              <div key={r.name} className="glass flex flex-col rounded-2xl p-7">
-                <Icon name="Quote" className="text-gold/40" size={32} />
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">
-                  {r.text}
-                </p>
-                <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary font-display text-lg text-gold">
-                    {r.name[0]}
-                  </div>
-                  <div>
-                    <p className="font-medium">{r.name}</p>
-                    <p className="text-xs text-muted-foreground">{r.role}</p>
-                  </div>
-                </div>
+            {[
+              'https://cdn.poehali.dev/projects/37648556-50d5-42c0-ad96-805e03ac1b12/bucket/cb2b20a4-4fbb-436d-9be4-6de7a3c0fad8.png',
+              'https://cdn.poehali.dev/projects/37648556-50d5-42c0-ad96-805e03ac1b12/bucket/d3d72354-8e31-4fc1-b8fe-3df8ce4682f5.png',
+              'https://cdn.poehali.dev/projects/37648556-50d5-42c0-ad96-805e03ac1b12/bucket/d60f8745-69ba-47de-8f5b-30365e502bb6.png',
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="glass overflow-hidden rounded-2xl border border-gold/15 transition-transform hover:-translate-y-1"
+              >
+                <img
+                  src={src}
+                  alt={`Отзыв участника ${i + 1}`}
+                  className="w-full object-cover"
+                />
               </div>
             ))}
           </div>
@@ -452,26 +451,54 @@ const Index = () => {
       {/* ABOUT ME */}
       <section id="me" className="relative py-24">
         <div className="container relative z-10 max-w-5xl">
-          <div className="glass grid items-center gap-10 rounded-3xl p-8 sm:p-12 md:grid-cols-[280px_1fr]">
-            <div className="relative mx-auto">
-              <div className="absolute inset-0 animate-pulse-glow rounded-full bg-violet/30 blur-2xl" />
-              <div className="relative flex h-56 w-56 items-center justify-center rounded-full border border-gold/30 bg-secondary/40 glow-gold">
-                <Icon name="UserRound" className="text-gold/70" size={90} />
-              </div>
+          <div className="glass grid items-start gap-10 rounded-3xl p-8 sm:p-12 md:grid-cols-[300px_1fr]">
+            <div className="relative mx-auto md:mx-0">
+              <div className="absolute inset-0 animate-pulse-glow rounded-3xl bg-violet/30 blur-2xl" />
+              <img
+                src="https://cdn.poehali.dev/projects/37648556-50d5-42c0-ad96-805e03ac1b12/bucket/3bb78606-570a-4eef-8d94-8f985103122c.png"
+                alt="Элла Ворошилина"
+                className="relative w-full max-w-[300px] rounded-3xl border border-gold/30 object-cover glow-gold"
+              />
             </div>
             <div>
               <SectionLabel icon="Feather">Обо мне</SectionLabel>
               <h2 className="font-display text-4xl font-light">Элла Ворошилина</h2>
-              <p className="mt-5 leading-relaxed text-muted-foreground">
-                Проводник в трансформационных практиках, наставник по пробуждению
-                сознания. Я помогаю людям снимать чужие программы, возвращаться к себе и
-                выстраивать жизнь из состояния внутренней свободы.
-              </p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                За годы практики через мои программы прошли сотни человек, которые
-                перестали жить на автопилоте и обрели ясность, опору и контакт со своей
-                истинной природой.
-              </p>
+              <div className="mt-6 space-y-5">
+                {[
+                  {
+                    icon: 'Antenna',
+                    title: 'Проводник новой реальности',
+                    text: 'Энергопрактик, ченнелер и целитель, трансформирующий жизни через работу с первопричинами на тонком плане.',
+                  },
+                  {
+                    icon: 'Eye',
+                    title: 'Чистый канал восприятия',
+                    text: 'Использую clairvoyance и управление энергией, чтобы точечно обнаруживать скрытые блоки, разрывать деструктивные кармические контракты и освобождать от груза «тяжёлой судьбы».',
+                  },
+                  {
+                    icon: 'Volume2',
+                    title: 'Мастер тишины',
+                    text: 'Автор уникальных сеансов, проходящих в тотальном молчании, где вместо пустых разговоров и логики включаются мощные процессы перестройки вашей энергосистемы.',
+                  },
+                  {
+                    icon: 'TrendingUp',
+                    title: 'Результат в материи',
+                    text: 'Помогаю сильным людям и помогающим практикам выйти из хронической усталости и финансовых тупиков в состояние лёгкости, безопасности и изобилия.',
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-4">
+                    <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gold/30 bg-gold/5">
+                      <Icon name={item.icon} className="text-gold" size={18} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">{item.title}</p>
+                      <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               <Button
                 asChild
                 className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 glow-gold"
